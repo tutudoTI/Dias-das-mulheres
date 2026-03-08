@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Feliz Dia da Mulher ❤️</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+
+font-family: Arial, Helvetica, sans-serif;
+background: linear-gradient(180deg,#0a0a0a,#1a1a1a);
+color:white;
+text-align:center;
+overflow:hidden;
+
+}
+
+.container{
+
+padding:30px;
+max-width:500px;
+margin:auto;
+
+}
+
+h1{
+
+color:#ff4da6;
+font-size:32px;
+margin-top:30px;
+
+}
+
+p{
+
+margin-top:20px;
+font-size:18px;
+line-height:1.5;
+
+}
+
+.foto{
+
+width:220px;
+border-radius:20px;
+margin-top:25px;
+box-shadow:0 0 25px #ff4da6;
+
+}
+
+button{
+
+margin-top:30px;
+padding:14px 28px;
+border:none;
+border-radius:10px;
+background:#ff4da6;
+color:white;
+font-size:18px;
+cursor:pointer;
+transition:0.3s;
+
+}
+
+button:hover{
+
+transform:scale(1.08);
+background:#ff1a8c;
+
+}
+
+#mensagem{
+
+opacity:0;
+margin-top:25px;
+font-size:20px;
+transition:1s;
+
+}
+
+.heart{
+
+position:fixed;
+top:-10px;
+color:#ff4da6;
+font-size:20px;
+animation:cair linear forwards;
+
+}
+
+@keyframes cair{
+
+0%{
+transform:translateY(-10px);
+opacity:1;
+}
+
+100%{
+transform:translateY(100vh);
+opacity:0;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>🌹 Feliz Dia da Mulher 🌹</h1>
+
+<img class="foto" src="foto.jpg.jpeg">
+
+<p>
+Hoje é o dia de celebrar uma mulher incrível.
+Mas para mim, você é especial em todos os dias ❤️
+</p>
+
+<button onclick="mostrarMensagem()">Clique aqui</button>
+
+<div id="mensagem">
+
+<p>
+Feliz Dia da Mulher meu amor ❤️<br><br>
+
+Você é uma pessoa incrível, forte, linda e que ilumina
+minha vida todos os dias.<br><br>
+
+Sou muito feliz por ter você comigo e espero viver
+muitos momentos ao seu lado.<br><br>
+
+Eu te amo muito 💕
+</p>
+
+</div>
+
+</div>
+
+
+<!-- Música -->
+
+<iframe width="0" height="0"
+src="https://www.youtube.com/embed/8Z6hQd7Z6J8?autoplay=1&loop=1&playlist=8Z6hQd7Z6J8"
+frameborder="0"
+allow="autoplay">
+</iframe>
+
+
+<script>
+
+function mostrarMensagem(){
+
+document.getElementById("mensagem").style.opacity = 1
+
+}
+
+function criarCoração(){
+
+const heart = document.createElement("div")
+
+heart.classList.add("heart")
+
+heart.innerHTML="❤️"
+
+heart.style.left=Math.random()*100+"vw"
+
+heart.style.fontSize=(Math.random()*20+15)+"px"
+
+heart.style.animationDuration=(Math.random()*3+3)+"s"
+
+document.body.appendChild(heart)
+
+setTimeout(()=>{
+heart.remove()
+},6000)
+
+}
+
+setInterval(criarCoração,300)
+
+</script>
+
+</body>
+</html>
